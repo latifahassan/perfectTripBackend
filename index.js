@@ -93,6 +93,7 @@ const destinations = [
         image:'https://lp-cms-production.imgix.net/2021-08/shutterstockRF_1541944991.jpg?auto=format&w=1440&h=810&fit=crop&q=75',
         type: 'Beach',
         companions: ['Friends', 'Partner'],
+        activities: ['Relaxing on the beach', 'Watersports','Eating','Party'],
     },
     {
         name:'Zanzibar',
