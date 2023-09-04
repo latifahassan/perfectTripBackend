@@ -16,7 +16,7 @@ app.post('/suggest-destination', (req, res) => {
     return (
       destination.type === userPreferences.type &&
       destination.companions.includes(userPreferences.companions) &&
-      destination.activities.includes(userPreferences.activities)
+      userPreferences.activities.every(activity => destination.activities.includes(activity))
     );
   });
 
@@ -35,6 +35,7 @@ app.post('/suggest-destination', (req, res) => {
     res.status(404).json({ message: 'No matching destinations found' });
   }
 });
+
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
