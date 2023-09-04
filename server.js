@@ -13,11 +13,19 @@ app.post('/suggest-destination', (req, res) => {
   console.log('Received request with userPreferences:', userPreferences);
 
   const suggestedDestinations = destinations.filter(destination => {
-    return (
-      destination.type === userPreferences.type &&
-      destination.companions.includes(userPreferences.companions) &&
-      userPreferences.activities.every(activity => destination.activities.includes(activity))
+    // Check if the destination's type matches the user's preference
+    const isTypeMatch = destination.type === userPreferences.type;
+
+    // Check if the companions match the user's preference
+    const areCompanionsMatch = destination.companions.includes(userPreferences.companions);
+
+    // Check if all selected activities are included in the destination's activities
+    const areActivitiesMatch = userPreferences.activities.every(activity =>
+      destination.activities.includes(activity)
     );
+
+    // Return true if all conditions are met
+    return isTypeMatch && areCompanionsMatch && areActivitiesMatch;
   });
 
   // Log the intermediate results for debugging
