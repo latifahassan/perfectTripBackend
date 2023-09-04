@@ -101,7 +101,7 @@ const destinations = [
         image:'https://media-cdn.tripadvisor.com/media/photo-s/27/fe/08/c9/nungwi-beach-resort-by.jpg',
         type: 'Beach',
         companions: ['Friends', 'Partner'],
-        activities: ['Relaxing on the beach', 'Watersports','Eating','Party'],
+        activities: ['Relaxing on the beach','Watersports','Eating','Party'],
     },
     {
         name: 'Dubai',
@@ -109,7 +109,7 @@ const destinations = [
         image:'https://www.theglobetrottingdetective.com/wp-content/uploads/2021/01/Dubai-in-7-days-and-best-things-to-do-in-Dubai-.jpg',
         type: 'City',
         companions: ['Friends','Family', 'Partner'],
-        activities: ['Eating', 'Party','Sightseeing','Watersports','Relaxing on the beach'],
+        activities: ['Eating', 'Party','Watersports','Relaxing on the beach'],
     },
     {
         name: 'Cape Town',
@@ -158,6 +158,14 @@ const destinations = [
         type: 'Mountains',
         companions: ['Friends','Family', 'Partner'],
         activities: ['Eating','Sightseeing','Wintersports','Watersports'],
+    },
+    {
+        name: 'Budapest',
+        country: 'Hungary',
+        image:'https://www.telegraph.co.uk/content/dam/Travel/Destinations/Europe/Hungary/Budapest/budapest-guide-lead.jpg?imwidth=1400',
+        type: 'City',
+        companions: ['Friends', 'Partner'],
+        activities: ['Watersports','Sightseeing'],
     }
   ];
   
